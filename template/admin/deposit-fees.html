@@ -1,0 +1,27 @@
+{% extends 'admin/b.html' %}
+{% block title %}{% endblock title %}
+{% block body %}
+{% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+{% endif %}
+<form method='post'  action="deposit-fees">
+    {% csrf_token %}
+    <label for="roll-number">Roll Number</label>
+    <input type="text" name="rollno"></br>
+    <label for="Name">Name</label>
+    <input type="text" name="name"><br/>
+    <label for="class">Class</label>
+    <select name="cl" id="">
+        <option value="1">select student</option>
+        {% for student in students %}
+        <option value="{{ student.id }}">{{ student.name }}</option>
+        {% endfor %}
+    </select>
+    <br/>
+    <label for="amount">Amount</label>
+    <input type="text" name="amount"><br/>
+    <input type="submit" value="Submit">
+</form>
+{% endblock body %}

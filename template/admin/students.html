@@ -1,0 +1,120 @@
+{% extends 'admin/b.html' %}
+{%  block title %}{% endblock title %}
+{% block body %}
+<div class="contacts-area mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            {% for student in students %}
+
+            
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="student-inner-std res-mg-b-30">
+                    <div class="student-img">
+                        <img src="{{ 'media/' }}{{ student.image }}" alt="" />
+                    </div>
+                    <div class="student-dtl">
+                        <h2>{{ student.name }}</h2>
+                        <p class="dp">{{ student.name }}</p>
+                        <p class="dp-ag"><b>{{ student.dob }}</b> </p>
+                    </div>
+                    <a href=""></a>
+                                <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                            </a>
+                            
+                            <a href="{{'delete-student/'}}{{ student.id }}">
+                                <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                            </a> 
+                </div>
+            </div>
+            {% endfor %}
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="student-inner-std res-mg-b-30">
+                    <div class="student-img">
+                        <img src="img/student/2.jpg" alt="" />
+                    </div>
+                    <div class="student-dtl">
+                        <h2>Alexam Angles</h2>
+                        <p class="dp">Computer Science</p>
+                        <p class="dp-ag"><b>Age:</b> 20 Years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="student-inner-std res-mg-b-30 res-tablet-mg-t-30 dk-res-t-pro-30">
+                    <div class="student-img">
+                        <img src="img/student/3.jpg" alt="" />
+                    </div>
+                    <div class="student-dtl">
+                        <h2>Alexam Angles</h2>
+                        <p class="dp">Computer Science</p>
+                        <p class="dp-ag"><b>Age:</b> 20 Years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="student-inner-std res-tablet-mg-t-30 dk-res-t-pro-30">
+                    <div class="student-img">
+                        <img src="img/student/4.jpg" alt="" />
+                    </div>
+                    <div class="student-dtl">
+                        <h2>Alexam Angles</h2>
+                        <p class="dp">Computer Science</p>
+                        <p class="dp-ag"><b>Age:</b> 20 Years</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="student-inner-std mg-t-30">
+                    <div class="student-img">
+                        <img src="img/student/1.jpg" alt="" />
+                    </div>
+                    <div class="student-dtl">
+                        <h2>Alexam Angles</h2>
+                        <p class="dp">Computer Science</p>
+                        <p class="dp-ag"><b>Age:</b> 20 Years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="student-inner-std mg-t-30">
+                    <div class="student-img">
+                        <img src="img/student/2.jpg" alt="" />
+                    </div>
+                    <div class="student-dtl">
+                        <h2>Alexam Angles</h2>
+                        <p class="dp">Computer Science</p>
+                        <p class="dp-ag"><b>Age:</b> 20 Years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="student-inner-std mg-t-30">
+                    <div class="student-img">
+                        <img src="img/student/3.jpg" alt="" />
+                    </div>
+                    <div class="student-dtl">
+                        <h2>Alexam Angles</h2>
+                        <p class="dp">Computer Science</p>
+                        <p class="dp-ag"><b>Age:</b> 20 Years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                <div class="student-inner-std mg-t-30">
+                    <div class="student-img">
+                        <img src="img/student/4.jpg" alt="" />
+                    </div>
+                    <div class="student-dtl">
+                        <h2>Alexam Angles</h2>
+                        <p class="dp">Computer Science</p>
+                        <p class="dp-ag"><b>Age:</b> 20 Years</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
